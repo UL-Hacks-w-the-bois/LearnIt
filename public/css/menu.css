@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.posted-questions{
+    background-color: #F69D5C;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+.message{
+    background-color: white;
+    margin: 15px;
+    width: auto;
+    border-radius: 15px;
+}
+
+#header{
+    text-align: center;
+    background-color: #F69D5C;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+img{
+    max-width: 50px; 
+    max-height: 50px;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: #e9e4e1;
+	
+	margin: 20px;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background:#89CCF2;
+	color: white;
+	border: 0;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#questionInput{
+    width: 99%;
+    height: 100px;
+}
+
+#post-box{
+   
+    padding: 10px;
+    width:60%;
+    background-color: #F69D5C;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+#post-button {
+    margin: auto;
+    display: block;
+}
