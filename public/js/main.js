@@ -1,5 +1,5 @@
 const postBox = document.getElementById('post-box-form');
-
+const post = document.getElementsByClassName('.messages');
 const postedQuestions = document.querySelector('.posted-questions')
 
 
@@ -16,9 +16,23 @@ socket.emit('joinApp', {username, qualification});
 
 //On postmade outputting the text and username
 socket.on('postMade', (post) => {
-    console.log(post.text + ": " + post.username );
+    console.log(post.question + ": " + post.username );
 
     postQuestion(post);
+
+
+})
+
+socket.on('output-posts', data => {
+ 
+    console.log(data);
+
+    if (data.length){
+        data.forEach(question => {
+            postQuestion(question);
+        })
+    }
+    
 
 
 })
@@ -58,7 +72,9 @@ function postQuestion(question){
     div.appendChild(p);
     const para = document.createElement('p');
     para.classList.add('text');
-    para.innerText = question.text
+    para.innerText = question.question;
     div.appendChild(para);
     document.querySelector('.posted-questions').appendChild(div);
 }
+
+
