@@ -1,5 +1,7 @@
 const postBox = document.getElementById('post-box-form');
+
 const postedQuestions = document.querySelector('.posted-questions')
+
 
 //Getting username and qualification from the URL 
 const {username, qualification} = Qs.parse(location.search,{
@@ -15,7 +17,9 @@ socket.emit('joinApp', {username, qualification});
 //On postmade outputting the text and username
 socket.on('postMade', (post) => {
     console.log(post.text + ": " + post.username );
+
     postQuestion(post);
+
 
 })
 
@@ -40,6 +44,7 @@ postBox.addEventListener('submit', e => {
     //clearning the postbox values
     e.target.elements.questionInput.value =  '';
     e.target.elements.questionInput.focus();
+
 
 })
 

@@ -17,8 +17,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: #e9e4e1;
-	
+	background: #e9e4e1;	
 	margin: 20px;
 }
 
@@ -35,9 +34,14 @@ a {
 	align-items: flex-end;
 }
 
+
 .form-control label{
 	font-weight: bold;
 	margin-right: 10px;
+}
+
+#username-label{
+	margin-left: 25px;
 }
 
 .btn {
@@ -60,13 +64,15 @@ a {
 	text-align: center;
 	padding: 20px;
 	background: var(--dark-color-a);
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
 
 .join-main {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 .join-main p {
