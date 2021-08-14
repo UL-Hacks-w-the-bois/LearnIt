@@ -35,9 +35,14 @@ a {
 	align-items: flex-end;
 }
 
+
 .form-control label{
 	font-weight: bold;
 	margin-right: 10px;
+}
+
+#username-label{
+	margin-left: 25px;
 }
 
 .btn {
