@@ -23,8 +23,7 @@ io.on('connection', socket => {
     //Listening for post in order to emit postMade
     socket.on('post', (question) =>{
         const user = getCurrentUser(socket.id);
-
-        io.emit('postMade', (formatQuestion(question, user.username)));
+        io.emit('postMade', (formatQuestion(user.username, user.qualification, question)));
         
     });
 

@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+.posted-questions{
+    background-color: #F69D5C;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    min-height: 0px;
+    min-width: 0px;
+}
+
+.message{
+    background-color: white;
+    margin: 15px;
+    width: auto;
+    border-radius: 15px;
+}
+
 
 #header{
     text-align: center;

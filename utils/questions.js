@@ -1,6 +1,7 @@
-function formatQuestion(username, text) {
+function formatQuestion(username, qualification, text) {
 
-    return { username, text};
+    return {username, qualification, text};
+
 
 }
 

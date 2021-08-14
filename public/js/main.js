@@ -1,5 +1,8 @@
 const postBox = document.getElementById('post-box-form');
 
+const postedQuestions = document.querySelector('.posted-questions')
+
+
 //Getting username and qualification from the URL 
 const {username, qualification} = Qs.parse(location.search,{
     ignoreQueryPrefix: true,
@@ -14,6 +17,10 @@ socket.emit('joinApp', {username, qualification});
 //On postmade outputting the text and username
 socket.on('postMade', (post) => {
     console.log(post.text + ": " + post.username );
+
+    postQuestion(post);
+
+
 })
 
 //Post button submit
@@ -38,4 +45,20 @@ postBox.addEventListener('submit', e => {
     e.target.elements.questionInput.value =  '';
     e.target.elements.questionInput.focus();
 
+
 })
+
+//Posting question to DOM
+function postQuestion(question){
+    const div = document.createElement('div');
+    div.classList.add('message');
+    const p = document.createElement('p');
+    p.classList.add('meta');
+    p.innerText = question.username + ', ' + question.qualification;
+    div.appendChild(p);
+    const para = document.createElement('p');
+    para.classList.add('text');
+    para.innerText = question.text
+    div.appendChild(para);
+    document.querySelector('.posted-questions').appendChild(div);
+}
