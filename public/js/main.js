@@ -80,7 +80,7 @@ function postQuestion(question){
     div.appendChild(a);
     const imag =  document.createElement("IMG");
     imag.src = "comment_logo.png";
-    div.appendChild(imag);
+    a.appendChild(imag);
     document.querySelector('.posted-questions').appendChild(div);
 }
 

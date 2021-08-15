@@ -26,6 +26,23 @@
     margin-left: 15px;
 }
 
+.message a{
+    background-color: #89CCF2;
+    display: flex;
+    text-align: center;
+    align-items: flex-end; 
+    width: 80px;
+    height: 56px;
+    margin-right: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.message IMG{
+    background-color: #89CCF2;
+    justify-content: flex-end;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 
 #header{
     text-align: center;
