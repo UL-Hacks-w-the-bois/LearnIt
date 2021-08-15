@@ -5,11 +5,14 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    margin-top: 20px;
     margin-bottom: 20px;
     flex-direction: column;
     min-height: 0px;
     min-width: 0px;
+    border-radius: 15px;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
 }
 
 .message{
@@ -17,6 +20,10 @@
     margin: 15px;
     width: auto;
     border-radius: 15px;
+}
+
+.message p{
+    margin-left: 15px;
 }
 
 
