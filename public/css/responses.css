@@ -18,6 +18,7 @@ body {
 #enterComment{
 	text-align: center;
 	border: #F69D5C 3px solid;
+	background: #F69D5C;
 	border-radius: 25px;
 	width: 80%;
 	margin: auto;
@@ -28,4 +29,18 @@ body {
 	height: 100px;
 	
 	font-size: 20px;
+}
+
+.question-container{
+	background-color: #F69D5C;
+}
+
+#question-box{
+	background: white;
+	margin:15px;
+}
+
+#username-box{
+	background:white;
+	margin: 15px;
 }
