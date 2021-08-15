@@ -29,9 +29,6 @@ socket.on('output-posts', data => {
             postQuestion(question);
         })
     }
-    
-
-
 })
 
 //Post button submit
@@ -52,7 +49,7 @@ postBox.addEventListener('submit', e => {
     //Emitting message to the server
     socket.emit('post', (question));
 
-    //clearning the postbox values
+    //clearing the postbox values
     e.target.elements.questionInput.value =  '';
     e.target.elements.questionInput.focus();
 

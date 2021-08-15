@@ -24,7 +24,31 @@ questionBox.innerText = post.question;
 //     usernameBox.innerText = post.username+', '+post.qualification;
 //     questionBox.innerText = post.question;
 // }
+
+//Post button submit
+comments.addEventListener('submit', e => {
+    e.preventDefault();
+    let comment = e.target.elements.questionInput.value;
+    if(!comment){
+        return false;
+    }
+
+    postComment(comment);
+})
+
+//Posting comment to DOM
 function postComment(comment){
+    const div = document.createElement('div');
+    div.classList.add('comment');
+    const p = document.createElement('p');
+    p.classList.add('meta');
+    p.innerText = post.username +', ' + post.qualification;
+    div.appendChild(p);
+    const para = document.createElement('p');
+    para.classList.add('text');
+    para.innerText = post.comment;
+    div.appendChild(para);
+    document.querySelector('.posted-comments').appendChild(div);
 
 
 }
