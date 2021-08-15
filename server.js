@@ -17,8 +17,21 @@ mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true }).t
 }).catch(err => console.log(err))
 
 
+
 //Setting the static folder
 app.use(express.static(path.join(__dirname,'public')));
+
+app.get('/post/:id', function(req, res){
+    
+    res.sendFile('./public/responses.html', {"root": __dirname});
+
+    // res.send(req.params.id);
+
+    // Post.find({ "_id": req.params.id}).limit(1).then(result => {
+    //     console.log(result);
+    // });
+})
+
 
 //Server listenting for connection
 io.on('connection', socket => {
@@ -43,7 +56,7 @@ io.on('connection', socket => {
         const post = new Post({question, username, qualification});
 
         post.save().then(() => {
-            io.emit('postMade', (formatQuestion(user.username, user.qualification, question)));
+            io.emit('postMade', (post));
         })
         
         

@@ -83,3 +83,19 @@ body {
     margin: auto;
     display: block;
 }
+
+
+.message button{
+    float:right;
+    width: 100px;
+    height: 20px; 
+    background-color: #89CCF2;
+    color: black;
+}
+
+.message i{
+    margin:auto;
+    padding:0;
+    float:left;
+
+}
