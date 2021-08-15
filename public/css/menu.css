@@ -34,9 +34,14 @@
     justify-content: center;
     color: white;
 }
+
+#header h1{
+    font-size: 50px;
+}
+
 img{
-    max-width: 50px; 
-    max-height: 50px;
+    max-width: 100px; 
+    max-height: 100px;
     margin-left: 10px;
     margin-top: 15px;
 }
