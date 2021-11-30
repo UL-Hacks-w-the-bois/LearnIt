@@ -9,7 +9,8 @@ const io = socketio(server);
 const formatQuestion = require('./utils/questions');
 const {userJoin, getCurrentUser} = require('./utils/users');
 const Post = require('./models/posts');
-const mongoDB = 'mongodb+srv://LearnItDevs:amongus@cluster0.cjju7.mongodb.net/post-database?retryWrites=true&w=majority'
+const mongoDB = 'mongodb+srv://LearnItDevs:amongus@cluster0.5kwyl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+      //'mongodb+srv://LearnItDevs:amongus@cluster0.cjju7.mongodb.net/post-database?retryWrites=true&w=majority'
 
 //connecting to mongoose
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
